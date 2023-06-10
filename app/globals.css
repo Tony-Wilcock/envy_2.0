@@ -11,9 +11,15 @@
   --clr-accent-gold-background: #dccdcb;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @layer components {
   .hover-underline {
-    @apply px-4 relative before:ease-out before:duration-300 before:absolute before:rounded-full before:h-1 before:w-[100%] before:bg-[var(--clr-accent-gold)] before:-bottom-2 before:left-0 before:scale-x-0 hover:before:scale-x-100;
+    @apply mx-4 relative before:ease-out before:duration-300 before:absolute before:rounded-full before:h-1 before:w-[100%] before:bg-[var(--clr-accent-gold)] before:-bottom-2 before:left-0 before:scale-x-0 hover:before:scale-x-100;
   }
 
   @media (min-width: 768px) {
@@ -25,5 +31,4 @@
 
 body {
   background-color: var(--clr-accent-gold-background);
-  overflow-x: hidden;
 }
