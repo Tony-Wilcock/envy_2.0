@@ -3,25 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Colours */
+  --clr-primary-blue: #1b2548;
+  --clr-primary-blue-transparent: #1e2548b3;
+  --clr-primary-blue-light: #4e61c1;
+  --clr-accent-gold: #cea49d;
+  --clr-accent-gold-background: #dccdcb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .hover-underline {
+    @apply px-4 relative before:ease-out before:duration-300 before:absolute before:rounded-full before:h-1 before:w-[100%] before:bg-[var(--clr-accent-gold)] before:-bottom-2 before:left-0 before:scale-x-0 hover:before:scale-x-100;
+  }
+
+  @media (min-width: 768px) {
+    .hover-underline {
+      @apply before:bg-[var(--clr-primary-blue)];
+    }
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--clr-accent-gold-background);
+  overflow-x: hidden;
 }
