@@ -28,7 +28,7 @@ const Navbar = () => {
       </header>
 
       {/* Mobile nav */}
-      <div className='z-20 absolute top-0 right-0 flex justify-center items-center md:hidden overflow-hidden'>
+      <div className='z-20 fixed top-0 right-0 flex justify-center items-center md:hidden overflow-hidden'>
         <Hamburger />
         <div
           className='flex flex-col justify-around items-center 
