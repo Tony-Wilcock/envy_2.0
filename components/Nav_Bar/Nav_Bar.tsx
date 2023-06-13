@@ -9,33 +9,30 @@ import Button from '../Globals/Button';
 const Navbar = () => {
   return (
     <>
-      <header className='w-full h-[80px] sm:h-[100px] fixed top-0 z-10 bg-[#F5E1E1]'>
+      <header className='w-full h-[100px] fixed top-0 z-50 bg-light-gold'>
         <div className=' max-w-[1440px] flex justify-around items-center m-auto'>
-          <div className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] flex justify-center items-center'>
+          <div className='w-[100px] h-[100px] flex justify-center items-center'>
             <Button />
           </div>
           <a href='/'>
             <Image
               src={logo}
               alt='Envy logo'
-              className='w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] border-2 border-[var(--clr-accent-gold)] rounded-full'
+              className='w-[90px] h-[90px] border-2 border-medium-gold rounded-full'
             />
           </a>
-          <div className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] invisible md:visible flex justify-center items-center'>
+          <div className='w-[100px] h-[100px] invisible md:visible flex justify-center items-center'>
             <Nav_Bar_Socials />
           </div>
         </div>
       </header>
 
       {/* Mobile nav */}
-      <div className='z-20 fixed top-0 right-0 flex justify-center items-center md:hidden overflow-hidden'>
+      <div className='z-50 fixed top-0 right-0 flex justify-center items-center md:hidden overflow-hidden'>
         <Hamburger />
-        <div
-          className='flex flex-col justify-around items-center 
-            pt-24 bg-[var(--clr-accent-gold-light-transparent)] backdrop-blur-sm h-[80vh] w-[70vw]  ease-in-out duration-[400ms] mob-nav-list'
-        >
+        <div className='flex flex-col justify-around items-center pt-24 bg-light-transparent border-l-2 border-b-2 border-medium-gold backdrop-blur-sm h-[80vh] w-[70vw] ease-in-out duration-[400ms] mob-nav-list'>
           <nav>
-            <ul className='flex flex-col gap-10 items-center justify-around h-full w-full text-[var(--clr-accent-gold)] font-bold'>
+            <ul className='flex flex-col gap-10 items-center justify-around h-full w-full text-medium-gold font-bold'>
               <Nav_List />
             </ul>
           </nav>
@@ -44,9 +41,9 @@ const Navbar = () => {
       </div>
 
       {/* Desktop nav */}
-      <div className='w-full hidden md:block sticky mt-[100px] bg-gradient-to-r from-[#CEA49D] from-30% via-[#DCCDCB] to-[#CEA49D] to-70%'>
+      <div className='z-40 w-full hidden md:block fixed mt-[100px] bg-gradient-to-r from-medium-gold from-30% via-bg-gold to-medium-gold to-70%'>
         <nav>
-          <ul className='max-w-[1000px] m-auto px-40 flex justify-around py-4 font-bold text-[var(--clr-accent-gold-dark)] '>
+          <ul className='max-w-[1000px] m-auto px-40 flex justify-around py-4 font-bold text-dark-gold'>
             <Nav_List />
           </ul>
         </nav>

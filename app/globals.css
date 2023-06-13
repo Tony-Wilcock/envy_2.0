@@ -33,6 +33,6 @@
 }
 
 body {
-  background-color: var(--clr-accent-gold-background);
   overflow-x: hidden;
+  background-color: var(--clr-accent-gold-background);
 }
