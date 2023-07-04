@@ -1,14 +1,17 @@
-export default function Button() {
+type Text = {
+  t: string;
+};
+
+const Button: React.FunctionComponent<Text> = (text) => {
+  const { t } = text;
   return (
-    <div>
-      <a
-        className='h-7 text-xs mx-auto mt-4 border-2 rounded-full border-medium-gold font-extrabold text-light-gold hover:text-medium-gold
-      bg-medium-gold hover:bg-light-gold p-2 px-4'
-        href='https://www.fresha.com/a/envy-aesthetics-beauty-wigan-all-over-beauty-7-ladies-lane-bnfr2jpb'
-        target='_blank'
-      >
-        Book Now
-      </a>
-    </div>
+    <button
+      className='text-xs mx-auto border-2 rounded-full border-primary-900 hover:border-primary-500 font-extrabold text-primary-100 hover:text-primary-500
+    bg-primary-900 hover:bg-primary-100 p-2 px-4 transition-colors'
+    >
+      {t}
+    </button>
   );
-}
+};
+
+export default Button;

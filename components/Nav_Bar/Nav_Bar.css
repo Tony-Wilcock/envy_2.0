@@ -25,11 +25,12 @@
 .hamburger-menu::after,
 .hamburger-menu input {
   content: '';
+  --bar-colour: #9e665a;
   width: var(--bar-width);
   height: var(--bar-height);
   border-radius: 100vh;
   transform-origin: left center;
-  background: var(--clr-accent-gold);
+  background: var(--bar-colour);
   transition: opacity var(--hamburger-anim-timing),
     width var(--hamburger-anim-timing), rotate var(--hamburger-anim-timing),
     translate var(--hamburger-anim-timing),

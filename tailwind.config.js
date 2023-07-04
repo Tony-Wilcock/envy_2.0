@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'media',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,14 +15,15 @@ module.exports = {
         'hero-image': "url('/public/splash-image.png')",
       },
       colors: {
-        'light-gold': 'var(--clr-accent-gold-light)',
-        'medium-gold': 'var(--clr-accent-gold)',
-        'dark-gold': 'var(--clr-accent-gold-dark)',
-        'light-transparent': 'var(--clr-accent-gold-light-transparent)',
-        'bg-gold': 'var(--clr-accent-gold-background)',
+        'primary-900': '#9E665A',
+        'primary-500': '#CEA49D',
+        'primary-100': '#F5E1E1',
+        'background-100': '#DCCDCB',
+        'background-transparent': '#CEA49D50',
+        'background-100-transparent': '#DCCDCBA0',
       },
       height: {
-        'header-height': '100px',
+        'header-height': 'var(header-height)',
       },
     },
   },

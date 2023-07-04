@@ -2,37 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Colours */
-  --clr-primary-blue: #1b2548;
-  --clr-primary-blue-transparent: #1e2548b3;
-  --clr-primary-blue-light: #4e61c1;
-  --clr-accent-gold: #cea49d;
-  --clr-accent-gold-dark: #a37068;
-  --clr-accent-gold-light: #f5e1e1;
-  --clr-accent-gold-light-transparent: #f5e1e1b3;
-  --clr-accent-gold-background: #dccdcb;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 @layer components {
   .hover-underline {
-    @apply mx-4 relative before:ease-out before:duration-300 before:absolute before:rounded-full before:h-1 before:w-[100%] before:bg-[var(--clr-accent-gold)] before:-bottom-2 before:left-0 before:scale-x-0 hover:before:scale-x-100;
+    @apply mx-4 relative before:ease-out before:duration-300 before:absolute before:rounded-full before:h-1 before:w-[100%] before:bg-primary-900 before:-bottom-2 before:left-0 before:scale-x-0 hover:before:scale-x-100;
   }
 
   @media (min-width: 768px) {
     .hover-underline {
-      @apply before:bg-[var(--clr-accent-gold-dark)];
+      @apply before:bg-primary-900;
     }
   }
 }
 
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+      z-index: 50;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      z-index: 50;
+    }
+  }
+}
+
+:root {
+  --header-height: 100px;
+  --header-w-nav-height: 150px;
+  --carousel-width: 300px;
+  --carousel-height: 300px;
+}
+
 body {
-  overflow-x: hidden;
-  background-color: var(--clr-accent-gold-background);
+  background-color: #dccdcb;
 }
