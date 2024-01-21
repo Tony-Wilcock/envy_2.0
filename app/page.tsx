@@ -17,36 +17,36 @@ import Button from '@/components/Globals/Button';
 
 export default function Home() {
   return (
-    <div className='snap-y snap-mandatory scroll-smooth h-screen overflow-y-scroll overflow-x-hidden no-scrollbar'>
+    <div className='no-scrollbar h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scroll-smooth'>
       {/* Main section */}
       <main
         id='main'
-        className='s w-full h-screen text-center text-primary-900 selection:bg-primary-900 selection:text-primary-100'
+        className='s h-screen w-full text-center text-primary-900 selection:bg-primary-900 selection:text-primary-100'
       >
-        <div className='snap-start h-full w-full max-w-[1440px] pt-[var(--header-height)] md:pt-[var(--header-w-nav-height)] md:grid md:justify-start md:mr-[50%] xl:mx-auto'>
-          <div className='-z-10 h-[calc(100vh_-_var(--header-w-nav-height))] absolute top-[var(--header-height)] md:top-[var(--header-w-nav-height)] right-0 overflow-y-hidden opacity-40 md:opacity-80'>
+        <div className='h-full w-full max-w-[1440px] snap-start pt-[var(--header-height)] md:mr-[50%] md:grid md:justify-start md:pt-[var(--header-w-nav-height)] xl:mx-auto'>
+          <div className='absolute right-0 top-[var(--header-height)] -z-10 h-[calc(100vh_-_var(--header-w-nav-height))] overflow-y-hidden opacity-40 md:top-[var(--header-w-nav-height)] md:opacity-80 '>
             <Image
               src={SplashImage}
               alt='Splash Image'
-              className='object-cover h-full'
+              className='h-full object-cover'
             />
           </div>
 
-          <div className='h-full w-full py-10 md:pl-20 grid items-baseline'>
-            <div className='flex justify-center items-start'>
+          <div className='grid h-full w-full items-baseline py-10 md:pl-20'>
+            <div className='flex items-start justify-center'>
               <h1 className='md:text-4xl'>
                 Welcome to <br />
-                <span className='font-bold text-7xl lg:text-9xl'>Emzy </span>
+                <span className='text-7xl font-bold lg:text-9xl'>Emzy </span>
                 <br />
                 <br className='hidden lg:block' />
-                <span className='font-bold text-2xl lg:text-5xl'>
+                <span className='text-2xl font-bold lg:text-5xl'>
                   Aesthetics &<br className='hidden md:block' /> Beauty
                 </span>
               </h1>
             </div>
 
-            <div className='h-1/2 flex justify-center items-end md:h-fit'>
-              <p className='max-w-[50ch] mx-auto px-10 lg:text-xl'>
+            <div className='flex h-1/2 items-end justify-center md:h-fit'>
+              <p className='mx-auto max-w-[50ch] px-10 lg:text-xl'>
                 Located in the heart of Hindley. Emzy provides medical
                 aesthetics care and treatments within the safe environment of a
                 relaxing clinic and beauty room. All services are provided by
@@ -63,75 +63,75 @@ export default function Home() {
         id='about'
         className='s h-screen w-full bg-background-100 text-primary-900 selection:bg-primary-900 selection:text-primary-100'
       >
-        <div className='snap-start h-full w-full pt-[var(--header-height)] md:pt-[var(--header-w-nav-height)] md:p-10 text-center grid items-center justify-center'>
+        <div className='grid h-full w-full snap-start items-center justify-center pt-[var(--header-height)] text-center md:p-10 md:pt-[var(--header-w-nav-height)]'>
           <div>
-            <h2 className='text-2xl lg:text-3xl uppercase font-bold underline'>
+            <h2 className='text-2xl font-bold uppercase underline lg:text-3xl'>
               About
             </h2>
           </div>
 
-          <div className='grid items-center justify-center w-full max-w-[1000px] md:grid-cols-2'>
-            <div className='grid grid-cols-3 gap-5 p-5 md:p-10 max-w-[300px] md:max-w-full mx-auto'>
-              <div className='grid gap-5 justify-center'>
+          <div className='grid w-full max-w-[1000px] items-center justify-center md:grid-cols-2'>
+            <div className='mx-auto grid max-w-[300px] grid-cols-3 gap-5 p-5 md:max-w-full md:p-10'>
+              <div className='grid justify-center gap-5'>
                 <Image
                   src={NmcImage}
                   alt='NMC logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
                 <Image
                   src={FacesImage}
                   alt='Faces logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
                 <Image
                   src={UclanImage}
                   alt='Uclan logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
                 <Image
                   src={EdgeHillImage}
                   alt='Edge Hill University logo'
-                  className=' shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className=' h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
               </div>
-              <div className='grid gap-5 justify-center'>
+              <div className='grid justify-center gap-5'>
                 <Image
                   src={RcnImage}
                   alt='RCN logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
                 <Image
                   src={StudexImage}
                   alt='Studex logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
                 <Image
                   src={CityGuilds}
                   alt='City and Guilds logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
               </div>
-              <div className='grid gap-5 justify-center'>
+              <div className='grid justify-center gap-5'>
                 <Image
                   src={DbsImage}
                   alt='DBS logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
                 <Image
                   src={CdpImage}
                   alt='CDP logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
                 <Image
                   src={PolicyBee}
                   alt='Policy Bee logo'
-                  className='shadow-xl max-w-full h-auto hover:scale-150 transition-all'
+                  className='h-auto max-w-full shadow-xl transition-all hover:scale-150'
                 />
               </div>
             </div>
 
-            <div className='h-full w-full flex justify-center items-center'>
-              <p className='s max-w-[40ch] sm:max-w-[50ch] md:p-10 text-center text-xs md:text-base lg:text-xl'>
+            <div className='flex h-full w-full items-center justify-center'>
+              <p className='s max-w-[40ch] text-center text-xs sm:max-w-[50ch] md:p-10 md:text-base lg:text-xl'>
                 As a Registered Nurse and Certified Beauty Therapist, Emma has
                 the experience and skills to help you build your own unique
                 treatment that is completely customised to your needs. <br />
@@ -143,8 +143,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='flex justify-center items-center rounded-full'>
-            <Link href='/about' className='m-0 p-0 rounded-full'>
+          <div className='flex items-center justify-center rounded-full'>
+            <Link href='/about' className='m-0 rounded-full p-0'>
               <Button {...{ t: 'Learn More' }} />
             </Link>
           </div>
@@ -154,11 +154,11 @@ export default function Home() {
       {/* Treatments section */}
       <section
         id='treatments'
-        className='s h-screen w-full text-primary-900 selection:bg-primary-900 selection:text-primary-100 bg-background-100'
+        className='s h-screen w-full bg-background-100 text-primary-900 selection:bg-primary-900 selection:text-primary-100'
       >
-        <div className='snap-start h-full w-full pt-[var(--header-height)] md:pt-[var(--header-w-nav-height)] p-10 text-center grid items-center justify-center'>
+        <div className='grid h-full w-full snap-start items-center justify-center p-10 pt-[var(--header-height)] text-center md:pt-[var(--header-w-nav-height)]'>
           <div>
-            <h2 className='text-2xl lg:text-3xl uppercase font-bold underline'>
+            <h2 className='text-2xl font-bold uppercase underline lg:text-3xl'>
               Treatments
             </h2>
           </div>
@@ -172,11 +172,11 @@ export default function Home() {
       {/* Prices section */}
       <section
         id='prices'
-        className='s h-screen w-full text-primary-900 selection:bg-primary-900 selection:text-primary-100 bg-gray-500'
+        className='s h-screen w-full bg-gray-500 text-primary-900 selection:bg-primary-900 selection:text-primary-100'
       >
-        <div className='snap-start h-full w-full pt-[var(--header-height)] md:pt-[var(--header-w-nav-height)] p-10 text-center grid items-center justify-center'>
+        <div className='grid h-full w-full snap-start items-center justify-center p-10 pt-[var(--header-height)] text-center md:pt-[var(--header-w-nav-height)]'>
           <div>
-            <h2 className='text-2xl lg:text-3xl uppercase font-bold underline'>
+            <h2 className='text-2xl font-bold uppercase underline lg:text-3xl'>
               Prices
             </h2>
           </div>
@@ -189,11 +189,11 @@ export default function Home() {
       {/* Gallery section */}
       <section
         id='gallery'
-        className='s h-screen w-full text-primary-900 selection:bg-primary-900 selection:text-primary-100 bg-gray-700'
+        className='s h-screen w-full bg-gray-700 text-primary-900 selection:bg-primary-900 selection:text-primary-100'
       >
-        <div className='snap-start h-full w-full pt-[var(--header-height)] md:pt-[var(--header-w-nav-height)] p-10 text-center grid items-center justify-center'>
+        <div className='grid h-full w-full snap-start items-center justify-center p-10 pt-[var(--header-height)] text-center md:pt-[var(--header-w-nav-height)]'>
           <div>
-            <h2 className='text-2xl lg:text-3xl uppercase font-bold underline'>
+            <h2 className='text-2xl font-bold uppercase underline lg:text-3xl'>
               Gallary
             </h2>
           </div>
@@ -203,11 +203,11 @@ export default function Home() {
       {/* Contact section */}
       <section
         id='contact'
-        className='s h-screen w-full text-primary-900 selection:bg-primary-900 selection:text-primary-100 bg-gray-900'
+        className='s h-screen w-full bg-gray-900 text-primary-900 selection:bg-primary-900 selection:text-primary-100'
       >
-        <div className='snap-start h-full w-full pt-[var(--header-height)] md:pt-[var(--header-w-nav-height)] p-10 text-center grid items-center justify-center'>
+        <div className='grid h-full w-full snap-start items-center justify-center p-10 pt-[var(--header-height)] text-center md:pt-[var(--header-w-nav-height)]'>
           <div>
-            <h2 className='text-2xl lg:text-3xl uppercase font-bold underline'>
+            <h2 className='text-2xl font-bold uppercase underline lg:text-3xl'>
               Contact
             </h2>
           </div>

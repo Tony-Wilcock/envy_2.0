@@ -10,8 +10,8 @@ import Links from 'next/link';
 const Navbar = () => {
   return (
     <>
-      <header className='w-full h-[var(--header-height)] fixed top-0 z-50 bg-primary-100'>
-        <div className=' max-w-[1440px] flex justify-around items-center m-auto'>
+      <header className='fixed top-0 z-50 h-[var(--header-height)] w-full bg-primary-100'>
+        <div className=' m-auto flex max-w-[1440px] items-center justify-around'>
           <div className='rounded-full'>
             <Links href='#contact'>
               <Buttons {...{ t: 'Book Now' }} />
@@ -22,18 +22,18 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt='Envy logo'
-                className='w-[100px] h-[var(--header-height)]'
+                className='h-[var(--header-height)] w-[100px]'
               />
             </Links>
           </div>
-          <div className='w-[100px] h-[var(--header-height)] flex justify-center items-center'>
-            <div className='invisible md:visible absolute'>
+          <div className='flex h-[var(--header-height)] w-[100px] items-center justify-center'>
+            <div className='invisible absolute md:visible'>
               <Nav_Bar_Socials />
             </div>
             <Hamburger />
-            <aside className='mob-nav-list absolute ease-in-out duration-[400ms] md:hidden border-l-2 border-b-2 border-primary-900 bg-background-transparent backdrop-blur-sm right-0 top-0 w-[70vw] h-[80vh] flex flex-col items-center justify-between pt-[var(--header-height)] pb-[50px]'>
+            <aside className='mob-nav-list absolute right-0 top-0 flex h-[80vh] w-[70vw] flex-col items-center justify-between border-b-2 border-l-2 border-primary-900 bg-background-transparent pb-[50px] pt-[var(--header-height)] backdrop-blur-sm duration-[400ms] ease-in-out md:hidden'>
               <nav>
-                <ul className='flex flex-col gap-10 items-center justify-around h-full w-full text-primary-900 text-xl font-bold'>
+                <ul className='flex h-full w-full flex-col items-center justify-around gap-10 text-xl font-bold text-primary-900'>
                   <Nav_List />
                 </ul>
               </nav>
@@ -44,9 +44,9 @@ const Navbar = () => {
       </header>
 
       {/* Desktop nav */}
-      <div className='z-40 w-full hidden md:block fixed mt-[100px] bg-gradient-to-r from-primary-500 from-40% via-background-100 to-primary-500 to-60%'>
+      <div className='fixed z-40 mt-[100px] hidden w-full bg-gradient-to-r from-primary-500 from-40% via-background-100 to-primary-500 to-60% md:block'>
         <nav>
-          <ul className='max-w-[1000px] m-auto px-40 flex justify-around py-4 font-bold text-primary-900'>
+          <ul className='m-auto flex max-w-[1000px] justify-around px-40 py-4 font-bold text-primary-900'>
             <Nav_List />
           </ul>
         </nav>

@@ -5,11 +5,12 @@ import Image from 'next/image';
 import { useKeenSlider, KeenSliderPlugin } from 'keen-slider/react';
 import './carousel.css';
 
-import Aesthetics from '@/public/Images/Carousel/aesthetics-1.png';
-import AntiWrinkle from '@/public/Images/Carousel/anti-wrinkle-1.png';
-import Beauty from '@/public/Images/Carousel/beauty-1.png';
-import FatLoss from '@/public/Images/Carousel/fat-loss-injection-1.png';
-import Vitamin from '@/public/Images/Carousel/vitamin-injections-1.png';
+import Aesthetics from '@/public/Images/Carousel/aesthetics-2.jpg';
+import AntiWrinkle from '@/public/Images/Carousel/anti-wrinkle-2.jpg';
+import Beauty from '@/public/Images/Carousel/beauty-2.jpg';
+import FatLoss from '@/public/Images/Carousel/fat-dissolving-2.jpg';
+import Vitamin from '@/public/Images/Carousel/vitamin-injections-2.jpg';
+import EarPiercing from '@/public/Images/Carousel/ear-piercing-1.jpg';
 import Link from 'next/link';
 import Button from '../Globals/Button';
 
@@ -22,7 +23,7 @@ function Arrow(props: {
   return (
     <svg
       onClick={props.onClick}
-      className={`w-8 h-8 absolute top-1/2 -translate-y-1/2 fill-white bg-black opacity-30 hover:opacity-100 rounded-full p-1 cursor-pointer ${
+      className={`absolute top-1/2 h-8 w-8 -translate-y-1/2 cursor-pointer rounded-full bg-black fill-white p-1 opacity-30 hover:opacity-100 ${
         props.left ? 'left-1' : 'left-auto right-1'
       } ${disabled} fill-white opacity-50`}
       xmlns='http://www.w3.org/2000/svg'
@@ -165,19 +166,19 @@ const carousel2 = () => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className='wrapper w-full h-full flex flex-col justify-center items-center select-none'>
-      <div className='scene w-[var(--carousel-width)] h-[var(--carousel-height)]'>
+    <div className='wrapper flex h-full w-full select-none flex-col items-center justify-center'>
+      <div className='scene h-[var(--carousel-height)] w-[var(--carousel-width)]'>
         <div
-          className='carousel keen-slider flex justify-center items-center'
+          className='carousel keen-slider flex items-center justify-center'
           ref={sliderRef}
         >
-          <div className='carousel__cell group flex flex-col items-center justify-center absolute left-0 w-[var(--carousel-width)] h-[var(--carousel-height)] border-2 border-primary-900 rounded-xl overflow-hidden'>
+          <div className='carousel__cell group absolute left-0 flex h-[var(--carousel-height)] w-[var(--carousel-width)] flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-primary-900'>
             <Image
               src={Aesthetics}
               alt='Aesthetics Image'
-              className='object-cover h-full w-full'
+              className='h-full w-full object-cover'
             />
-            <div className='absolute flex flex-col items-center justify-between top-1/3 lg:top-1/2 bottom-0 pt-5 translate-y-44 group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100'>
+            <div className='absolute bottom-0 top-1/3 flex translate-y-44 flex-col items-center justify-between bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100 pt-5 transition-transform duration-500 group-hover:translate-y-0 lg:top-1/2'>
               <h3 className='text-xl font-bold uppercase'>Aesthetics</h3>
               <p className='px-10 text-xs lg:text-base'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
@@ -189,13 +190,13 @@ const carousel2 = () => {
               </Link>
             </div>
           </div>
-          <div className='carousel__cell group flex flex-col items-center justify-center absolute left-0 w-[var(--carousel-width)] h-[var(--carousel-height)] border-2 border-primary-900 rounded-xl overflow-hidden'>
+          <div className='carousel__cell group absolute left-0 flex h-[var(--carousel-height)] w-[var(--carousel-width)] flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-primary-900'>
             <Image
               src={AntiWrinkle}
               alt='AntiWrinkle Image'
-              className='object-cover h-full w-full'
+              className='h-full w-full object-cover'
             />
-            <div className='absolute flex flex-col items-center justify-between top-1/3 lg:top-1/2 bottom-0 pt-5 translate-y-44 group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100'>
+            <div className='absolute bottom-0 top-1/3 flex translate-y-44 flex-col items-center justify-between bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100 pt-5 transition-transform duration-500 group-hover:translate-y-0 lg:top-1/2'>
               <h3 className='text-xl font-bold uppercase'>Anti-Wrinkle</h3>
               <p className='px-10 text-xs lg:text-base'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
@@ -207,13 +208,13 @@ const carousel2 = () => {
               </Link>
             </div>
           </div>
-          <div className='carousel__cell group flex flex-col items-center justify-center absolute left-0 w-[var(--carousel-width)] h-[var(--carousel-height)] border-2 border-primary-900 rounded-xl overflow-hidden'>
+          <div className='carousel__cell group absolute left-0 flex h-[var(--carousel-height)] w-[var(--carousel-width)] flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-primary-900'>
             <Image
               src={Beauty}
               alt='Beauty Image'
-              className='object-cover h-full w-full'
+              className='h-full w-full object-cover'
             />
-            <div className='absolute flex flex-col items-center justify-between top-1/3 lg:top-1/2 bottom-0 pt-5 translate-y-44 group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100'>
+            <div className='absolute bottom-0 top-1/3 flex translate-y-44 flex-col items-center justify-between bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100 pt-5 transition-transform duration-500 group-hover:translate-y-0 lg:top-1/2'>
               <h3 className='text-xl font-bold uppercase'>Beauty</h3>
               <p className='px-10 text-xs lg:text-base'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
@@ -225,14 +226,14 @@ const carousel2 = () => {
               </Link>
             </div>
           </div>
-          <div className='carousel__cell group flex flex-col items-center justify-center absolute left-0 w-[var(--carousel-width)] h-[var(--carousel-height)] border-2 border-primary-900 rounded-xl overflow-hidden'>
+          <div className='carousel__cell group absolute left-0 flex h-[var(--carousel-height)] w-[var(--carousel-width)] flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-primary-900'>
             <Image
               src={FatLoss}
               alt='FatLoss Image'
-              className='object-cover h-full w-full'
+              className='h-full w-full object-cover'
             />
-            <div className='absolute flex flex-col items-center justify-between top-1/3 lg:top-1/2 bottom-0 pt-5 translate-y-44 group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100'>
-              <h3 className='text-xl font-bold uppercase'>Fat-Loss</h3>
+            <div className='absolute bottom-0 top-1/3 flex translate-y-44 flex-col items-center justify-between bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100 pt-5 transition-transform duration-500 group-hover:translate-y-0 lg:top-1/2'>
+              <h3 className='text-xl font-bold uppercase'>Fat-Dissolving</h3>
               <p className='px-10 text-xs lg:text-base'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
                 ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
@@ -243,13 +244,13 @@ const carousel2 = () => {
               </Link>
             </div>
           </div>
-          <div className='carousel__cell group flex flex-col items-center justify-center absolute left-0 w-[var(--carousel-width)] h-[var(--carousel-height)] border-2 border-primary-900 rounded-xl overflow-hidden'>
+          <div className='carousel__cell group absolute left-0 flex h-[var(--carousel-height)] w-[var(--carousel-width)] flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-primary-900'>
             <Image
               src={Vitamin}
               alt='Vitamin Injection Image'
-              className='object-cover h-full w-full'
+              className='h-full w-full object-cover'
             />
-            <div className='absolute flex flex-col items-center justify-between top-1/3 lg:top-1/2 bottom-0 pt-5 translate-y-44 group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100'>
+            <div className='absolute bottom-0 top-1/3 flex translate-y-44 flex-col items-center justify-between bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100 pt-5 transition-transform duration-500 group-hover:translate-y-0 lg:top-1/2'>
               <h3 className='text-xl font-bold uppercase'>
                 Vitamin Injections
               </h3>
@@ -263,14 +264,14 @@ const carousel2 = () => {
               </Link>
             </div>
           </div>
-          <div className='carousel__cell group flex flex-col items-center justify-center absolute left-0 w-[var(--carousel-width)] h-[var(--carousel-height)] border-2 border-primary-900 rounded-xl overflow-hidden'>
+          <div className='carousel__cell group absolute left-0 flex h-[var(--carousel-height)] w-[var(--carousel-width)] flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-primary-900'>
             <Image
-              src={Aesthetics}
-              alt='Aesthetics Image'
-              className='object-cover h-full w-full'
+              src={EarPiercing}
+              alt='Ear Piercing Image'
+              className='h-full w-full object-cover'
             />
-            <div className='absolute flex flex-col items-center justify-between top-1/3 lg:top-1/2 bottom-0 pt-5 translate-y-44 group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100'>
-              <h3 className='text-xl font-bold uppercase'>Aesthetics</h3>
+            <div className='absolute bottom-0 top-1/3 flex translate-y-44 flex-col items-center justify-between bg-gradient-to-b from-transparent via-background-100-transparent via-10% to-primary-100 pt-5 transition-transform duration-500 group-hover:translate-y-0 lg:top-1/2'>
+              <h3 className='text-xl font-bold uppercase'>Ear Piercing</h3>
               <p className='px-10 text-xs lg:text-base'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
                 ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum
@@ -305,7 +306,7 @@ const carousel2 = () => {
         )}
       </div>
       {loaded && instanceRef.current && (
-        <div className='dots flex p-4 mt-4 justify-center items-center'>
+        <div className='dots mt-4 flex items-center justify-center p-4'>
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
@@ -316,9 +317,9 @@ const carousel2 = () => {
                   instanceRef.current?.moveToIdx(idx);
                 }}
                 className={
-                  'dot w-3 h-3 rounded-full p-1 mx-1 cursor-pointer focus:outline-none' +
+                  'dot mx-1 h-3 w-3 cursor-pointer rounded-full p-1 focus:outline-none' +
                   (currentSlide === idx
-                    ? ' active bg-red-400 scale-150'
+                    ? ' active scale-150 bg-red-400'
                     : ' bg-slate-300')
                 }
               ></button>
